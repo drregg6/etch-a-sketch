@@ -33,7 +33,7 @@ function createGrid(width=16) {
 
 window.onload = createGrid();
 
-function createGrid(width=16) {
+function createGrid(width=25) {
     let total = width * width;
     
     for (let i = 0; i < total; i++) {
@@ -42,6 +42,7 @@ function createGrid(width=16) {
             newRow.classList.add('row');
             container.appendChild(newRow);
         }
+        
         // after a new row is created
         // append to the latest row
         let rows = document.querySelectorAll('.row');
@@ -54,3 +55,11 @@ function createGrid(width=16) {
         row.appendChild(newDiv);
     }
 }
+
+const pixels = document.querySelectorAll('.pixel');
+
+pixels.forEach(pixel => {
+    pixel.addEventListener('click', () => {
+        alert('hello world!');
+    });
+});
