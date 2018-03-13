@@ -36,20 +36,21 @@ window.onload = createGrid();
 function createGrid(width=16) {
     let total = width * width;
     
-    for (let i = 1; i <= total; i++) {
-        if (i % width === 0 || i === 1) {
+    for (let i = 0; i < total; i++) {
+        if (i % width === 0 || i === 0) {
             let newRow = document.createElement('div');
             newRow.classList.add('row');
             container.appendChild(newRow);
         }
+        // after a new row is created
+        // append to the latest row
         let rows = document.querySelectorAll('.row');
         rows = Array.from(rows);
         let row = rows.splice(-1,1)[0];
         
+        // create, update, add
         let newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
         row.appendChild(newDiv);
-        
-        console.log(i);
     }
 }
