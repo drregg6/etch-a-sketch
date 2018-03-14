@@ -33,6 +33,10 @@ function createGrid(width=16) {
 
 window.onload = createGrid();
 
+// break this up
+// func createRow
+// func find rows
+// func createDiv
 function createGrid(width=25) {
     let total = width * width;
     
@@ -58,8 +62,13 @@ function createGrid(width=25) {
 
 const pixels = document.querySelectorAll('.pixel');
 
-pixels.forEach(pixel => {
-    pixel.addEventListener('click', () => {
-        console.log(this);
+pixels.forEach(function(pixel) {
+    pixel.addEventListener('mouseenter', function() {
+        this.classList.add('active');
+    });
+    pixel.addEventListener('click', function() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        }
     });
 });
