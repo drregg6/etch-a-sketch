@@ -3,6 +3,7 @@
 // TODO: pixel height and width should be equal
 // TODO: title text on top of screen
 // TODO: clean code
+// TODO: directions
 
 // .container's width should be 960px
 const container = document.querySelector('.container');
