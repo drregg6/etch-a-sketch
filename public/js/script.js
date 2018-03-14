@@ -1,35 +1,13 @@
+// TODO: reset button
+// TODO: input box so user can select container width
+// TODO: pixel height and width should be equal
+// TODO: title text on top of screen
+// TODO: clean code
+
 // .container's width should be 960px
 const container = document.querySelector('.container');
 
-// window.onload = createGrid();
-/* 
-function createGrid(width=16) {
-    for (let i = 0; i <= width; i++) {
-        if (width % 16 === 0) {
-            const row = document.createElement('div');
-            div.classList.add('row');
-            div.appendChild('.container');
-        }
-        const div = document.createElement('div');
-        div.classList.add('default-content');
-        div.appendChild('.row');
-    }
-}
-*/
-// create a grid - 16x16 (256 total spaces)
-// for each number up to 256
-//      create a new column element for every 16 divs
-//      create a new div element
-//      add a class to that div
-//      append it to the current column
-//      if the number % 16 === 0
-//          create a new
-
-// suggest using a flexbox for container (set width)
-// these will be SMALL divs
-
-// div.addeventlisten(hover / mouseenter, mouseleave)
-// add black
+var pixels;
 
 window.onload = createGrid();
 
@@ -58,10 +36,12 @@ function createGrid(width=54) {
         newDiv.classList.add('pixel');
         row.appendChild(newDiv);
     }
+    
+    pixels = document.querySelectorAll('.pixel');
 }
 
-const pixels = document.querySelectorAll('.pixel');
-
+// hover
+// arrow function does NOT work for callback eventlisteners
 pixels.forEach(function(pixel) {
     pixel.addEventListener('mouseenter', function() {
         this.classList.add('active');
