@@ -37,7 +37,7 @@ window.onload = createGrid();
 // func createRow
 // func find rows
 // func createDiv
-function createGrid(width=25) {
+function createGrid(width=54) {
     let total = width * width;
     
     for (let i = 0; i < total; i++) {

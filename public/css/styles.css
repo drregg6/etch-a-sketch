@@ -7,7 +7,7 @@
 .container {
     border: 5px solid red;
     
-    width: 540px;
+    width: 80vw;
     margin: 50px auto;
     
     display: flex;
@@ -25,10 +25,11 @@
     display: flex;
 }
 
+/* i would prefer the pixel not have a set height */
 .pixel {
 /*    border: 1px solid black;*/
 /*    margin: 1px;*/
-    height: 20px;
+    height: 10px;
     
     flex: 1 1 500px;
 }
