@@ -4,6 +4,25 @@
 // TODO: clean code
 // TODO: directions
 
+
+/*
+
+choosing different colors:
+three buttons for choices (black, white, colors)
+
+each button will activate the flag
+
+if (black) {
+    this.classList.add(black)
+} else if (white) {
+    this.classlist.add(white)
+} else {
+    this.classList.add(color)
+}
+
+*/
+
+
 // .container's width should be 960px
 const container = document.querySelector('.container');
 const input = document.querySelector('input');
@@ -15,6 +34,11 @@ var inputVal = parseInt(input.value);
 window.onload = createGrid();
 input.addEventListener('keyup', function() {
     inputVal = parseInt(input.value);
+});
+// hover will not work with the new grid's pixels
+resetBtn.addEventListener('click', function() {
+    deleteGrid();
+    createGrid(inputVal);
 });
 
 // break this up
@@ -45,6 +69,12 @@ function createGrid(width=25) {
     }
     
     pixels = document.querySelectorAll('.pixel');
+}
+
+function deleteGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 }
 
 // hover
