@@ -22,7 +22,7 @@ input.addEventListener('keyup', function() {
 // func createRow
 // func find rows
 // func createDiv
-function createGrid(width=54) {
+function createGrid(width=16) {
     let total = width * width;
     
     for (let i = 0; i < total; i++) {

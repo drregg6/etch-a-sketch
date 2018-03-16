@@ -5,7 +5,8 @@
 }
 
 .user-input {
-    margin: 10px auto;
+    text-align: center;
+    margin-top: 50px;
 }
 
 input,
@@ -16,11 +17,27 @@ button {
 
 input[type=number] {
     border-bottom: 2px solid black;
+    text-align: center;
+    width: 110px;
+    padding: 5px;
+    
+    transition: all .35s;
 }
+/* this removes the number spinner */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+input:focus {
+    border-bottom: 2px solid #f00;
+}
+
+button {
+    padding: 5px 25px;
+    background: #f0f;
+    color: #3f3f3f;
+    font-weight: 700;
 }
 
 .container {
