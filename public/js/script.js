@@ -7,10 +7,16 @@
 
 // .container's width should be 960px
 const container = document.querySelector('.container');
+const input = document.querySelector('input');
+const resetBtn = document.querySelector('button');
 
 var pixels;
+var inputVal = parseInt(input.value);
 
 window.onload = createGrid();
+input.addEventListener('keyup', function() {
+    inputVal = parseInt(input.value);
+});
 
 // break this up
 // func createRow
@@ -35,6 +41,7 @@ function createGrid(width=54) {
         // create, update, add
         let newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
+//        newDiv.style.height = newDiv.offsetWidth;
         row.appendChild(newDiv);
     }
     
@@ -43,6 +50,8 @@ function createGrid(width=54) {
 
 // hover
 // arrow function does NOT work for callback eventlisteners
+// because THIS value becomes WINDOW
+
 pixels.forEach(function(pixel) {
     pixel.addEventListener('mouseenter', function() {
         this.classList.add('active');
