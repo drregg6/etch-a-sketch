@@ -1,7 +1,6 @@
 // TODO: reset button
 // TODO: input box so user can select container width
 // TODO: pixel height and width should be equal
-// TODO: title text on top of screen
 // TODO: clean code
 // TODO: directions
 
@@ -22,7 +21,7 @@ input.addEventListener('keyup', function() {
 // func createRow
 // func find rows
 // func createDiv
-function createGrid(width=16) {
+function createGrid(width=25) {
     let total = width * width;
     
     for (let i = 0; i < total; i++) {
