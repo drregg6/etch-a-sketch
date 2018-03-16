@@ -1,12 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-weight: normal;
+    font-size: 3.5em;
+    letter-spacing: 2.5px;
+}
+
 .user-input {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 input,
