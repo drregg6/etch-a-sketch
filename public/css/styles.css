@@ -53,7 +53,10 @@ button {
 .container {
     border: 5px solid red;
     
-    width: 80vw;
+/*    width: 80vw;*/
+    width: 480px;
+/*    height: 480px;*/
+    max-height: 75%;
     margin: 50px auto;
     
     display: flex;
@@ -73,7 +76,7 @@ button {
 .pixel {
 /*    border: 1px solid black;*/
 /*    margin: 1px;*/
-    height: 20px;
+    height: 10px;
     
     flex: 1 1 500px;
 }

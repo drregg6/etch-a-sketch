@@ -1,5 +1,3 @@
-// TODO: reset button
-// TODO: input box so user can select container width
 // TODO: pixel height and width should be equal
 // TODO: clean code
 // TODO: directions
@@ -46,6 +44,8 @@ resetBtn.addEventListener('click', function() {
 // func find rows
 // func createDiv
 function createGrid(width=25) {
+    // resets pixels before each new grid
+    pixels = [];
     let total = width * width;
     
     for (let i = 0; i < total; i++) {
@@ -81,6 +81,8 @@ function deleteGrid() {
 // arrow function does NOT work for callback eventlisteners
 // because THIS value becomes WINDOW
 
+
+// look up EVENT DELEGATIONS
 pixels.forEach(function(pixel) {
     pixel.addEventListener('mouseenter', function() {
         this.classList.add('active');
