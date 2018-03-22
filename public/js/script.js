@@ -30,6 +30,15 @@ var pixels;
 var inputVal = parseInt(input.value);
 
 window.onload = createGrid();
+window.addEventListener('keyup', function(ev) {
+    if (inputVal && ev.which === 13) {
+        deleteGrid();
+        createGrid(inputVal);
+        input.value = '';
+    } else {
+        return;
+    }
+})
 input.addEventListener('keyup', function() {
     inputVal = parseInt(input.value);
 });
@@ -37,6 +46,7 @@ input.addEventListener('keyup', function() {
 resetBtn.addEventListener('click', function() {
     deleteGrid();
     createGrid(inputVal);
+    input.value = '';
 });
 
 // break this up
@@ -66,6 +76,8 @@ function createGrid(width=25) {
         newDiv.classList.add('pixel');
 //        newDiv.style.height = newDiv.offsetWidth;
         row.appendChild(newDiv);
+//        console.log(newDiv.offsetWidth);
+//        newDiv.style.height = newDiv.offsetWidth;
     }
     
     pixels = document.querySelectorAll('.pixel');
@@ -93,6 +105,16 @@ function deleteGrid() {
 //        }
 //    });
 //});
+
+
+/*
+
+with event delegation here, there is no way for me to get to .pixel without going through .container's childNode list (.row's), and then once again going through the .row's childNode list (.pixel)
+
+only then can i attach this
+
+*/
+
 
 //container.addEventListener('mouseenter', function(ev) {
 //    let target = ev.target;
