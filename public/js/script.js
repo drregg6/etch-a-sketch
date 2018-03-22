@@ -83,13 +83,36 @@ function deleteGrid() {
 
 
 // look up EVENT DELEGATIONS
-pixels.forEach(function(pixel) {
-    pixel.addEventListener('mouseenter', function() {
-        this.classList.add('active');
-    });
-    pixel.addEventListener('click', function() {
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-        }
-    });
+//pixels.forEach(function(pixel) {
+//    pixel.addEventListener('mouseenter', function() {
+//        this.classList.add('active');
+//    });
+//    pixel.addEventListener('click', function() {
+//        if (this.classList.contains('active')) {
+//            this.classList.remove('active');
+//        }
+//    });
+//});
+
+//container.addEventListener('mouseenter', function(ev) {
+//    let target = ev.target;
+//    let children = target.children;
+//    
+//    console.log(target.children);
+//    // logs each row
+//    for (var i = 0; i < children.length; i++) {
+//        console.log(target.children.length);
+//    }
+//    
+//    console.log(ev);
+//})
+
+
+// cheating with jq but it works
+$(document).ready(function(){
+    
+    $('.container').on('mouseenter', '.pixel', function(ev){
+        $(this).addClass('active');
+    })
+    
 });
