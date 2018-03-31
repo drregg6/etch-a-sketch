@@ -24,10 +24,17 @@ if (black) {
 // .container's width should be 960px
 const container = document.querySelector('.container');
 const input = document.querySelector('input');
-const resetBtn = document.querySelector('button');
+const resetBtn = document.querySelector('.reset-btn');
+const blackBtn = document.querySelector('.black-btn');
+const whiteBtn = document.querySelector('.white-btn');
+const multiBtn = document.querySelector('.multi-btn');
 
 var pixels;
 var inputVal = parseInt(input.value);
+
+var blackFlag = true;
+var whiteFlag = false;
+var multiFlag = false;
 
 window.onload = createGrid();
 window.addEventListener('keyup', function(ev) {

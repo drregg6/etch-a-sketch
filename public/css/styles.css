@@ -52,14 +52,14 @@ button {
     transition: all .2s;
 }
 
-.reset {
+.reset-btn {
     margin-left: 10px;
     
     background: #8f8f8f;
     color: #000;
     border: 2px solid #000;
 }
-.reset:hover {
+.reset-btn:hover {
     background: #000;
     color: #8f8f8f;
 }
@@ -72,35 +72,35 @@ button {
     margin-left: 0;
 }
 
-.black {
+.black-btn {
     background-color: #000;
     color: #fff;
     
     border: 2px solid #fff;
 }
-.black:hover {
+.black-btn:hover {
     background: #fff;
     color: #000;
 }
 
-.white {
+.white-btn {
     background: #fff;
     color: #000;
     
     border: 2px solid #000;
 }
-.white:hover {
+.white-btn:hover {
     background: #000;
     color: #fff;
 }
 
-.multi {
+.multi-btn {
     background-color: #0000a0;
     color: #ffa500;
     
     border: 2px solid #ffa500;
 }
-.multi:hover {
+.multi-btn:hover {
     background-color: #ffa500;
     color: #0000a0;
 }
@@ -133,5 +133,8 @@ button {
 }
 
 .active {
-    background: #3f3f3f;
+    background: #000;
+}
+.erase {
+    background: #fff;
 }
