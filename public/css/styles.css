@@ -50,12 +50,37 @@ button {
     font-weight: 700;
 }
 
+.color-btns {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.color-btns > button {
+    margin-left: 25px;
+    font-variant: small-caps;
+}
+.color-btns > button:first-child {
+    margin-left: 0;
+}
+
+.black {
+    background-color: #000;
+    color: #fff;
+}
+
+.white {
+    background: #fff;
+    color: #000;
+}
+
+.multi {
+    background-color: #
+}
+
 .container {
     border: 5px solid red;
     
-/*    width: 80vw;*/
     width: 480px;
-/*    height: 480px;*/
     max-height: 75%;
     margin: 50px auto;
     
@@ -74,8 +99,6 @@ button {
 
 /* i would prefer the pixel not have a set height */
 .pixel {
-/*    border: 1px solid black;*/
-/*    margin: 1px;*/
     height: 10px;
     
     flex: 1 1 500px;
