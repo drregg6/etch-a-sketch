@@ -3,24 +3,6 @@
 // TODO: directions
 
 
-/*
-
-choosing different colors:
-three buttons for choices (black, white, colors)
-
-each button will activate the flag
-
-if (black) {
-    this.classList.add(black)
-} else if (white) {
-    this.classlist.add(white)
-} else {
-    this.classList.add(color)
-}
-
-*/
-
-
 // .container's width should be 960px
 const container = document.querySelector('.container');
 const input = document.querySelector('input');
@@ -156,14 +138,23 @@ only then can i attach this
 //})
 
 
-// cheating with jq but it works
+/*
+
+cheating with jq but it works
+
+I don't necessarily like this solution because it changes the css to inline
+I prefer the class method, but I can't get a random color without js
+
+*/
 $(document).ready(function(){
     
     $('.container').on('mouseenter', '.pixel', function(ev){
         if (blackFlag) {
-            $(this).addClass('active');
+            $(this).css('background', '#000');
+//            $(this).addClass('active');
         } else if (whiteFlag) {
-            $(this).addClass('erase');
+            $(this).css('background', '#fff');
+//            $(this).addClass('erase');
         } else if (multiFlag) {
             var color = '#' + Math.floor(Math.random()*16777215).toString(16);
             
