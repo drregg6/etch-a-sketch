@@ -44,20 +44,29 @@ input:focus {
 }
 
 button {
+    margin-left: 25px;
     padding: 5px 25px;
-    background: #f0f;
-    color: #3f3f3f;
     font-weight: 700;
+    
+    font-variant: small-caps;
+    transition: all .2s;
+}
+
+.reset {
+    margin-left: 10px;
+    
+    background: #8f8f8f;
+    color: #000;
+    border: 2px solid #000;
+}
+.reset:hover {
+    background: #000;
+    color: #8f8f8f;
 }
 
 .color-btns {
     margin-top: 50px;
     text-align: center;
-}
-
-.color-btns > button {
-    margin-left: 25px;
-    font-variant: small-caps;
 }
 .color-btns > button:first-child {
     margin-left: 0;
@@ -66,15 +75,34 @@ button {
 .black {
     background-color: #000;
     color: #fff;
+    
+    border: 2px solid #fff;
+}
+.black:hover {
+    background: #fff;
+    color: #000;
 }
 
 .white {
     background: #fff;
     color: #000;
+    
+    border: 2px solid #000;
+}
+.white:hover {
+    background: #000;
+    color: #fff;
 }
 
 .multi {
-    background-color: #
+    background-color: #0000a0;
+    color: #ffa500;
+    
+    border: 2px solid #ffa500;
+}
+.multi:hover {
+    background-color: #ffa500;
+    color: #0000a0;
 }
 
 .container {
