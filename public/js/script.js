@@ -160,7 +160,13 @@ only then can i attach this
 $(document).ready(function(){
     
     $('.container').on('mouseenter', '.pixel', function(ev){
-        $(this).addClass('active');
+        if (blackFlag) {
+            $(this).addClass('active');
+        } else if (whiteFlag) {
+            $(this).addClass('erase');
+        }
+        
+//        $(this).addClass('active');
     })
     
 });
