@@ -54,6 +54,25 @@ resetBtn.addEventListener('click', function() {
     deleteGrid();
     createGrid(inputVal);
     input.value = '';
+    
+    blackFlag = true;
+    whiteFlag = false;
+    multiFlag = false;
+});
+blackBtn.addEventListener('click', function() {
+    blackFlag = true;
+    whiteFlag = false;
+    multiFlag = false;
+});
+whiteBtn.addEventListener('click', function() {
+    blackFlag = false;
+    whiteFlag = true;
+    multiFlag = false;
+});
+multiBtn.addEventListener('click', function() {
+    blackFlag = false;
+    whiteFlag = false;
+    multiFlag = true;
 });
 
 // break this up
