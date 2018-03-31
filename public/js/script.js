@@ -164,9 +164,11 @@ $(document).ready(function(){
             $(this).addClass('active');
         } else if (whiteFlag) {
             $(this).addClass('erase');
+        } else if (multiFlag) {
+            var color = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            $(this).css('background', color);
         }
-        
-//        $(this).addClass('active');
     })
     
 });
