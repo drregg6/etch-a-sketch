@@ -111,13 +111,6 @@ button {
     width: 510px;
     height: 510px;
     margin: 50px auto;
-    
-/*
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-between;
-*/
 }
 
 .row {
@@ -126,23 +119,14 @@ button {
     display: block;
     margin: 0;
     padding: 0;
-    
-    
-    
-/*    height: auto;*/
-    
-/*    display: flex;*/
 }
 
-/* i would prefer the pixel not have a set height */
 .pixel {
     height: inherit;
     
     display: inline-block;
     margin: 0;
     padding: 0;
-    
-/*    flex: 1 1 500px;*/
 }
 
 .active {

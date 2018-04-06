@@ -1,9 +1,12 @@
-// TODO: pixel height and width should be equal
 // TODO: clean code
 // TODO: directions
+/*
 
+BUGS
+- when pixels is set >38, hover skips the first row
 
-// .container's width should be 960px
+*/
+
 const container = document.querySelector('.container');
 const input = document.querySelector('input');
 const resetBtn = document.querySelector('.reset-btn');
@@ -31,7 +34,7 @@ window.addEventListener('keyup', function(ev) {
 input.addEventListener('keyup', function() {
     inputVal = parseInt(input.value);
 });
-// hover will not work with the new grid's pixels
+
 resetBtn.addEventListener('click', function() {
     deleteGrid();
     createGrid(inputVal);
@@ -87,10 +90,7 @@ function createGrid(width=25) {
         let newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
         newDiv.style.width = pixelWidth;
-//        newDiv.style.height = newDiv.offsetWidth;
         row.appendChild(newDiv);
-//        console.log(newDiv.offsetWidth);
-//        newDiv.style.height = newDiv.offsetWidth;
     }
     
     pixels = document.querySelectorAll('.pixel');
