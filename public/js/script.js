@@ -64,12 +64,16 @@ multiBtn.addEventListener('click', function() {
 function createGrid(width=25) {
     // resets pixels before each new grid
     pixels = [];
-    let total = width * width;
+    let totalPixels = width * width;
+    const containerWidth = 500;
+    let rowHeight = `${containerWidth / width}px`;
+    let pixelWidth = `${containerWidth / width}px`;
     
-    for (let i = 0; i < total; i++) {
+    for (let i = 0; i < totalPixels; i++) {
         if (i % width === 0 || i === 0) {
             let newRow = document.createElement('div');
             newRow.classList.add('row');
+            newRow.style.height = rowHeight;
             container.appendChild(newRow);
         }
         
@@ -82,6 +86,7 @@ function createGrid(width=25) {
         // create, update, add
         let newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
+        newDiv.style.width = pixelWidth;
 //        newDiv.style.height = newDiv.offsetWidth;
         row.appendChild(newDiv);
 //        console.log(newDiv.offsetWidth);

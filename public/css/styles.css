@@ -108,28 +108,41 @@ button {
 .container {
     border: 5px solid red;
     
-    width: 480px;
-    max-height: 75%;
+    width: 510px;
+    height: 510px;
     margin: 50px auto;
     
+/*
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-between;
+*/
 }
 
 .row {
     width: inherit;
-    height: auto;
     
-    display: flex;
+    display: block;
+    margin: 0;
+    padding: 0;
+    
+    
+    
+/*    height: auto;*/
+    
+/*    display: flex;*/
 }
 
 /* i would prefer the pixel not have a set height */
 .pixel {
-    height: 10px;
+    height: inherit;
     
-    flex: 1 1 500px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+/*    flex: 1 1 500px;*/
 }
 
 .active {
